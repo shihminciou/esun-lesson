@@ -1,1 +1,114 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$main-color: #00AD95;
+$input-height-base: 40px;
+$color-a: #666;
+$color-input-icon: $color-a;
+$main-darker-color: #206060;
+$header-height: 60px;
+
+.heading {
+  color: $main-color;
+  letter-spacing: 2px;
+}
+
+.logo {
+  padding-top: 104px;
+  padding-bottom: 30px;
+}
+
+.logo img {
+  width: 45px;
+}
+
+.loginform {
+  max-width: 430px;
+  margin: auto;
+}
+
+.btn-ylw {
+  background-color: #FFD54F;
+  border: 1px solid #82691B;
+  color: #333;
+  height: $input-height-base;
+}
+
+/* bootstrap input placeholder */
+
+/* WebKit, Blink, Edge */
+
+.form-control::-webkit-input-placeholder {
+  color: #B8B9B9;
+  font-weight: 300;
+}
+
+.inputstyle {
+  background-color: #F5F7FA;
+}
+
+.form-control.inputstyle.oneline,
+.form-group.oneline {
+  margin-top: 27px;
+}
+
+.input-group-text {
+  color: $color-input-icon;
+}
+
+.greenLink {
+  color: $main-color !important;
+}
+
+.greenLink :hover {
+  color: $main-color;
+}
+
+mat-sidenav.mat-drawer,
+.sidemenu .mat-list-item,
+.sidemenu .mat-nav-list .mat-list-item {
+  color: white;
+  font-size: 15px !important;
+}
+
+.sidemenu .mat-list-item:hover,
+.sidemenu .mat-nav-list .mat-list-item:hover {
+  color: #FFD54F !important;
+  background-color: $main-darker-color !important;
+}
+
+.sidenav-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - #{$header-height});
+}
+
+mat-sidenav.mat-drawer {
+  position: fixed;
+  width: 180px;
+  overflow-y: auto;
+  box-shadow: 2px 0px 8px 0px rgba(0, 0, 0, 0.1);
+  background-color: $main-color;
+  margin-top: $header-height;
+}
+
+mat-sidenav.mat-drawer,
+.sidemenu .mat-list-item,
+.sidemenu .mat-nav-list .mat-list-item {
+  color: white;
+  font-size: 15px !important;
+}
+
+.sidemenu .mat-list-item:hover,
+.sidemenu .mat-nav-list .mat-list-item:hover {
+  color: #FFD54F !important;
+  background-color: $main-darker-color !important;
+}
+
+esb-menu .mat-nav-list {
+  padding-top: 0px;
+}
+
+.ullistno .mat-nav-list .mat-list-item .mat-list-item-content {
+  padding-left: 30px;
+}

@@ -19,6 +19,7 @@
       true,
       "element",
       "app",
+      "esb"
       "kebab-case"
     ],
     "import-blacklist": [

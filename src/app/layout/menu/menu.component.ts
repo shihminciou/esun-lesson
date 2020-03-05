@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from 'src/app/core/services/menu.service';
 
 @Component({
   selector: 'esb-menu',
@@ -7,14 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  menus = [
-    {id:1,text:'顧客查詢',url:'/clients/search'},
-    {id:2,text:'名單查詢',url:'/bol/search'}
-  ]
+  menus = [];
 
-  constructor() { }
+  constructor(private menuService: MenuService) { }
 
   ngOnInit(): void {
+    this.menus = this.menuService.getMenu();
   }
 
 }

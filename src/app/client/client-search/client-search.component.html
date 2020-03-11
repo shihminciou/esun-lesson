@@ -1,1 +1,43 @@
-<p>client-search works!</p>
+<div class="clearfix actions">
+</div>
+<nav class="navbar justify-content-between panel-head ">
+  <label class="navbar-brand">顧客查詢</label>
+</nav>
+
+
+<div sm-search-fields class="area shadow">
+
+  <form (ngSubmit)="handleOnSubmit()" [formGroup]="ClientForm" #dynamicForm="ngForm">
+      <div class="form-row">
+        <div class="form-group col-12 col-md-4 col-lg-3">
+          <label class="float-right ps_note">身份證字號/統一編號</label>
+            <input formControlName="ID"
+                   title="身分證字號"
+                   placeholder="e.g. A123456789"
+                   type="text"
+            class="form-control inputstyle">
+
+            <label class="float-right ps_note">戶名</label>
+            <input formControlName="CustomerName"
+                   title="戶名"
+                   placeholder="e.g. 王小明"
+                   type="text"
+            class="form-control inputstyle">
+        </div>
+
+        <div class="form-group col-md-4 col-lg-3">
+          <div class="form-bottom">
+            <button type="button" class="btn btn-ylw">
+              <i class="fa fa-search mr-1" aria-hidden="true"></i>搜尋</button>
+            <button type="button" class="btn btn-gry" >清除</button>
+          </div>
+        </div>
+
+      </div>
+  </form>
+
+
+
+
+
+</div>

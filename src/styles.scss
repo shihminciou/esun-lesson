@@ -7,6 +7,7 @@ $color-a: #666;
 $color-input-icon: $color-a;
 $main-darker-color: #206060;
 $header-height: 60px;
+$input-height-base: 40px;
 
 .heading {
   color: $main-color;
@@ -30,6 +31,13 @@ $header-height: 60px;
 .btn-ylw {
   background-color: #FFD54F;
   border: 1px solid #82691B;
+  color: #333;
+  height: $input-height-base;
+}
+
+.btn-gry {
+  background-color: #EAEAEA;
+  border: 1px solid #666;
   color: #333;
   height: $input-height-base;
 }
@@ -111,4 +119,178 @@ esb-menu .mat-nav-list {
 
 .ullistno .mat-nav-list .mat-list-item .mat-list-item-content {
   padding-left: 30px;
+}
+
+.clearfix.actions {
+  // margin-top: -40px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+}
+
+
+.modal-title,
+.navbar-brand,
+.name {
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.navbar-brand {
+  line-height: 1;
+  padding-top: 0;
+}
+
+// .navbar,
+.navbar-height {
+  height: 60px;
+}
+.navbar {
+  padding-bottom: $grid-gutter-width;
+}
+
+.navbar .nav .nav-link {
+  padding: 0 10px 0 10px;
+  position: relative;
+}
+
+.navbar.navbar-light.shadow.sticky-top {
+  background-color: #fff;
+}
+
+.navbar.navbar-light .btn {
+  padding: 0;
+  margin-right: 5px;
+}
+
+.navbar.navbar-light .btn-group {
+  margin: 0 5px;
+}
+
+.navbar .dropDown {
+  color: #666;
+}
+
+.navbar .dropDown:hover {
+  color: #666;
+}
+
+.ps_note {
+  color: #7F7F7F;
+  font-size: 15px;
+}
+
+.notice-board .panel-heading {
+  border-bottom: 1px solid #E5E5E5;
+  padding-bottom: 8px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.notice-board .panel-heading .greenLink {
+  font-size: 13px;
+}
+
+.card-body,
+.form-group>h6 {
+  font-size: 15px;
+}
+
+.form-group.oneline {
+  flex-flow: nowrap;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+  min-height: $input-height-base;
+  .form-bottom {
+    position: absolute;
+    bottom: 0;
+  }
+  & & {
+    margin-bottom: 0;
+  }
+  .btn + .btn {
+    margin-left: .25rem;
+  }
+}
+
+.form-group .row .col {
+  padding: 0;
+  margin: 0 10px;
+}
+.form-inline {
+  .form-group.inputs-horizon {
+    width: 100%;
+    .col-1 {
+      max-width: 60px;
+    }
+    .col-month {
+      max-width: 50px;
+    }
+  }
+  .form-group + .form-group {
+      padding-top: 10px;
+  }
+}
+
+.inputstyle,
+.inputstyle-addon {
+  background-color: #F5F7FA;
+  border: none;
+  border-radius: 3px;
+  line-height: $input-height-base;
+  height: $input-height-base;
+  padding-top: 0;
+  padding-bottom: 0;
+  &[type="number"] {
+    padding-right: $grid-gutter-width * .25;
+  }
+}
+.pd-Right-30{
+  padding-right: 30px;
+}
+.inputstyleCheck {
+  display: flex;
+  height: $input-height-base;
+}
+
+.inputstyle:focus {
+  height: $input-height-base;
+  background-color: #F5F7FA;
+  border: solid 1px #666666;
+  box-shadow: none;
+  border: none;
+  box-shadow: 0 0 0px 1px #666;
+}
+
+.inputstyleSelect {
+  background-color: #F5F7FA;
+  border: none;
+  border-radius: 3px;
+  height: $input-height-base;
+}
+
+.inputstyleSelect:focus {
+  background-color: #F5F7FA;
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  height: $input-height-base;
+}
+
+.inputstyletextArea {
+  background-color: #F5F7FA;
+  border: none;
+  border-radius: 3px;
+}
+
+.inputstyletextArea:focus {
+  background-color: #F5F7FA;
+  border: solid 1px #666666;
+  box-shadow: none;
+  border: none;
+  box-shadow: 0 0 0px 1px #666;
 }

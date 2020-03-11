@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl,FormGroup } from '@angular/forms';
+import { FormControl,FormGroup,Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-client-search',
@@ -9,8 +9,8 @@ import { FormControl,FormGroup } from '@angular/forms';
 export class ClientSearchComponent implements OnInit {
 
   ClientForm = new FormGroup({
-    ID: new FormControl(),
-    CustomerName: new FormControl(),
+    ID: new FormControl('',[Validators.minLength(2)]),
+    CustomerName: new FormControl(''),
   });
 
   constructor() { }
@@ -18,8 +18,8 @@ export class ClientSearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleOnSubmit() {
-    console.log('Your form data : ', this.ClientForm.value );
+  onSubmit($event: Event) {
+    console.log('Your form data : ', $event );
   }
 
 }

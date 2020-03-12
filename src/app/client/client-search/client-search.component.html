@@ -1,12 +1,19 @@
-<div class="clearfix actions">
-</div>
-<nav class="navbar justify-content-between panel-head ">
-  <label class="navbar-brand">顧客查詢</label>
-</nav>
+<section>
 
+<esb-search-main searchHeader="顧客查詢">
+    <ul sm-actions class="nav float-sm-right float-xs-none nav-function-btn">
+      <li>
+          <button type="button" class="nav-link btn">
+              <i class="fa fa-plus iconspace" aria-hidden="true"></i>新增顧客</button>
+      </li>
+      <li>
+          <button type="button" class="nav-link btn">
+              <i class="fa fa-eye iconspace" aria-hidden="true"></i>調閱特記對象查詢記錄</button>
+      </li>
+    </ul>
+</esb-search-main>
 
-<div sm-search-fields class="area shadow">
-
+<div class="area shadow">
   <form (ngSubmit)="onSubmit($event)" [formGroup]="ClientForm" #clientSearchForm>
       <div class="form-row">
         <div class="form-group col-12 col-md-4 col-lg-3">
@@ -17,7 +24,6 @@
                    placeholder="e.g. A123456789"
                    type="text"
                    required
-                   [(ngModel)]="ID"
             class="form-control inputstyle">
             <div *ngIf="ClientForm.get('ID').invalid && ClientForm.get('ID').dirty" style="color: red">身分證不得為空</div>
         </div>
@@ -42,9 +48,6 @@
 
       </div>
   </form>
-
-
-
-
-
 </div>
+
+</section>

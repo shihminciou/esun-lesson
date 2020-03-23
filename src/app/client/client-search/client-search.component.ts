@@ -19,7 +19,7 @@ export class ClientSearchComponent implements OnInit {
   }
 
   onSubmit($event: Event) {
-    console.log('Your form data : ', $event );
+    console.log('Your form data : ', this.ClientForm.value );
   }
 
 }

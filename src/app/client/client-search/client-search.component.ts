@@ -23,4 +23,8 @@ export class ClientSearchComponent implements OnInit {
     console.log('Your form data : ', this.ClientForm.value );
   }
 
+  get isSearchFormValid(): boolean {
+    return this.ClientForm.valid;
+  }
+
 }

@@ -40,7 +40,7 @@
 
         <div class="form-group col-md-4 col-lg-3">
           <div class="form-bottom">
-            <button type="submit" class="btn btn-ylw">
+            <button type="submit" class="btn btn-ylw" [disabled]="!isSearchFormValid">
               <i class="fa fa-search mr-1" aria-hidden="true"></i>搜尋</button>
             <button type="button" class="btn btn-gry" (click)="clientSearchForm.reset()" >清除</button>
           </div>

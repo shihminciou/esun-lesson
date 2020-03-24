@@ -25,7 +25,7 @@
                    type="text"
                    required
             class="form-control inputstyle">
-            <div *ngIf="ClientForm.get('ID').invalid && ClientForm.get('ID').dirty" style="color: red">請輸入正確格式</div>
+            <div *ngIf="ClientForm.get('ID').invalid && ClientForm.get('ID').dirty" style="color: red">統一編號格式輸入錯誤</div>
         </div>
 
 
@@ -49,5 +49,11 @@
       </div>
   </form>
 </div>
+
+<div *ngFor = "let customer of customers">
+  {{ customer.Circikey }}
+  {{ customer.CustomerName }}
+</div>
+
 
 </section>

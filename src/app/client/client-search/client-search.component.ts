@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl,FormGroup,Validators } from '@angular/forms';
+import { CirciKeyValidator } from 'src/app/shared/functions/validators';
 
 @Component({
   selector: 'app-client-search',
@@ -9,7 +10,7 @@ import { FormControl,FormGroup,Validators } from '@angular/forms';
 export class ClientSearchComponent implements OnInit {
 
   ClientForm = new FormGroup({
-    ID: new FormControl('',[Validators.minLength(2)]),
+    ID: new FormControl('',CirciKeyValidator),
     CustomerName: new FormControl(''),
   });
 

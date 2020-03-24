@@ -29,10 +29,13 @@ export class ClientSearchComponent implements OnInit {
 
   onSubmit($event: Event) {
     // console.log('Your form data : ', this.ClientForm.value );
-    // this.clientService.query().subscribe((data) => console.log(data));
-    this.http.get('https://www.mocky.io/v2/5e79bc6230000098009301ca').subscribe((data: HttpResponseResult) => {
-      this.customers = data.Value;
+    this.clientService.query().subscribe((data: HttpResponseResult) => {
+        this.customers = data.Value;
     });
+
+    // this.http.get('https://www.mocky.io/v2/5e79bc6230000098009301ca').subscribe((data: HttpResponseResult) => {
+    //   this.customers = data.Value;
+    // });
   }
 
   get isSearchFormValid(): boolean {

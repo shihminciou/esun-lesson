@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgxPermissionsService } from 'ngx-permissions';
 
 @Component({
   selector: 'app-login',
@@ -15,9 +16,12 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private permissionsService: NgxPermissionsService
   ) { }
 
   ngOnInit(): void {
+    const perm = ["ADMIN"]; // 理論上這裡是從login後由後端api給的權限範本
+    this.permissionsService.loadPermissions(perm);
   }
 
   onSubmit() {

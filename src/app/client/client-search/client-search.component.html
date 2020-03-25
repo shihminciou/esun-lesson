@@ -59,4 +59,17 @@
 </div>
 
 
+<div *ngxPermissionsOnly="['ADMIN', 'GUEST']">
+  <div>ADMIN跟GUEST都可以看到</div>
+</div>
+
+<ng-template ngxPermissionsOnly="ADMIN">
+<div>只有ADMIN可以看到</div>
+</ng-template>
+
+<ng-template [ngxPermissionsExcept]="['JOHNY']">
+ <div>只有ADMIN看不到</div>
+</ng-template>
+
+
 </section>

@@ -4,6 +4,7 @@ import { CirciKeyValidator } from 'src/app/shared/functions/validators';
 import { ClientService } from 'src/app/core/services/client.service';
 import { HttpClient } from '@angular/common/http';
 import { HttpResponseResult } from 'src/app/core/models/response.model';
+import { NgxPermissionsService } from 'ngx-permissions';
 
 @Component({
   selector: 'app-client-search',
@@ -21,10 +22,13 @@ export class ClientSearchComponent implements OnInit {
 
   constructor(
     private clientService: ClientService,
-    private http: HttpClient
+    private http: HttpClient,
+    private permissionsService: NgxPermissionsService
   ) { }
 
   ngOnInit(): void {
+    const perm = ["GUEST"]; // 理論上這裡是從login後由後端api給的權限範本
+    this.permissionsService.loadPermissions(perm);
   }
 
   onSubmit($event: Event) {

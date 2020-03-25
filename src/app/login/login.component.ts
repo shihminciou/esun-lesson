@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const perm = ["ADMIN"]; // 理論上這裡是從login後由後端api給的權限範本
+    const perm = ["GUEST"]; // 理論上這裡是從login後由後端api給的權限範本
     this.permissionsService.loadPermissions(perm);
   }
 
